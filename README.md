@@ -7,7 +7,10 @@ Dark soft UI, D-pad only, no ads, no analytics, no INTERNET permission.
 
 - **Home** — greeting and clock, then **Favorites**, **Recent apps** and an alphabetical **All apps** grid.
 - **Enter** opens an app. **Hold Enter** (or long-press) opens **Pin / Unpin, App info, Uninstall**.
-- **Quick settings** tiles open the system Wi-Fi, Display, Sound and Settings screens.
+- **Quick settings** tiles: **Inputs** (HDMI / AV / TV sources), Wi-Fi, Display, Sound, Settings.
+- **Inputs** lists the sources the TV reports, and switches to them via the standard
+  TV-input passthrough link, falling back to the TV's own source menu (Xiaomi's
+  `ExternalSourceActivity`, then the AOSP `VIEW_INPUTS` picker).
 - **Wallpaper** picker with five built-in soft gradients, remembered in SharedPreferences.
 - Lists every installed app exposing `LEANBACK_LAUNCHER` or `LAUNCHER`, with banner or icon.
 - Refreshes itself when apps are installed, removed or updated.

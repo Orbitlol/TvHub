@@ -114,6 +114,10 @@
                     layout="@layout/tile" />
 
                 <include
+                    android:id="@+id/tileInputs"
+                    layout="@layout/tile" />
+
+                <include
                     android:id="@+id/tileDisplay"
                     layout="@layout/tile" />
 

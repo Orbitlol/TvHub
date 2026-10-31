@@ -40,6 +40,20 @@
         <intent>
             <action android:name="android.settings.SOUND_SETTINGS" />
         </intent>
+        <!-- TV input switching is vendor specific: the panels we try, plus the
+             standard passthrough/view links used to hand off to the TV app. -->
+        <package android:name="com.xiaomi.mitv.tvplayer" />
+        <package android:name="com.mediatek.wwtv.tvcenter" />
+        <package android:name="com.google.android.tvlauncher" />
+        <package android:name="com.vt.tv.input" />
+        <package android:name="com.mitv.livetv" />
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="content" />
+        </intent>
+        <intent>
+            <action android:name="com.android.tv.action.VIEW_INPUTS" />
+        </intent>
     </queries>
 
     <application

@@ -179,24 +179,32 @@ class MainActivity : Activity() {
     }
 
     private fun setupTiles() {
-        setupTile(R.id.tileWifi, R.drawable.ic_wifi, R.string.tile_wifi, Settings.ACTION_WIFI_SETTINGS)
-        setupTile(R.id.tileDisplay, R.drawable.ic_display, R.string.tile_display, Settings.ACTION_DISPLAY_SETTINGS)
-        setupTile(R.id.tileSound, R.drawable.ic_sound, R.string.tile_sound, Settings.ACTION_SOUND_SETTINGS)
-        setupTile(R.id.tileSettings, R.drawable.ic_settings, R.string.tile_settings, Settings.ACTION_SETTINGS)
-
-        val wallpaperTile = findViewById<View>(R.id.tileWallpaper)
-        wallpaperTile.findViewById<ImageView>(R.id.tileIcon).setImageResource(R.drawable.ic_wallpaper)
-        wallpaperTile.findViewById<TextView>(R.id.tileLabel).setText(R.string.tile_wallpaper)
-        Ui.attach(wallpaperTile)
-        wallpaperTile.setOnClickListener { showWallpaperPicker() }
+        setupTile(R.id.tileWifi, R.drawable.ic_wifi, R.string.tile_wifi) {
+            openSettings(Settings.ACTION_WIFI_SETTINGS)
+        }
+        setupTile(R.id.tileInputs, R.drawable.ic_inputs, R.string.tile_inputs) {
+            showInputs()
+        }
+        setupTile(R.id.tileDisplay, R.drawable.ic_display, R.string.tile_display) {
+            openSettings(Settings.ACTION_DISPLAY_SETTINGS)
+        }
+        setupTile(R.id.tileSound, R.drawable.ic_sound, R.string.tile_sound) {
+            openSettings(Settings.ACTION_SOUND_SETTINGS)
+        }
+        setupTile(R.id.tileSettings, R.drawable.ic_settings, R.string.tile_settings) {
+            openSettings(Settings.ACTION_SETTINGS)
+        }
+        setupTile(R.id.tileWallpaper, R.drawable.ic_wallpaper, R.string.tile_wallpaper) {
+            showWallpaperPicker()
+        }
     }
 
-    private fun setupTile(id: Int, icon: Int, label: Int, action: String) {
+    private fun setupTile(id: Int, icon: Int, label: Int, onClick: () -> Unit) {
         val tile = findViewById<View>(id)
         tile.findViewById<ImageView>(R.id.tileIcon).setImageResource(icon)
         tile.findViewById<TextView>(R.id.tileLabel).setText(label)
         Ui.attach(tile)
-        tile.setOnClickListener { openSettings(action) }
+        tile.setOnClickListener { onClick() }
     }
 
     private fun openSettings(action: String) {
@@ -275,6 +283,10 @@ class MainActivity : Activity() {
 
     private fun showWallpaperPicker() {
         Dialogs.wallpaperPicker(this, prefs) { applyWallpaper() }
+    }
+
+    private fun showInputs() {
+        InputsDialog.show(this)
     }
 
     private fun restoreFocus() {

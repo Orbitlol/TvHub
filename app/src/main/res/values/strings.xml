@@ -17,6 +17,7 @@
     <string name="hint_menu">Hold Enter on an app for options</string>
 
     <string name="tile_wifi">Wi-Fi</string>
+    <string name="tile_inputs">Inputs</string>
     <string name="tile_display">Display</string>
     <string name="tile_sound">Sound</string>
     <string name="tile_settings">Settings</string>
@@ -26,6 +27,10 @@
     <string name="unpin">Unpin from favorites</string>
     <string name="app_info">App info</string>
     <string name="uninstall">Uninstall</string>
+    <string name="inputs_title">Inputs</string>
+    <string name="inputs_subtitle">Choose a source</string>
+    <string name="inputs_menu">TV input menu</string>
+    <string name="inputs_failed">This TV does not expose its inputs to apps</string>
     <string name="wallpaper_title">Wallpaper</string>
     <string name="action_unavailable">Not available on this device</string>
 </resources>
