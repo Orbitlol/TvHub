@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Square app icon: the same flame on a soft violet halo. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <path
+        android:fillColor="#0C1120"
+        android:pathData="M0,0h108v108H0z" />
+    <path
+        android:fillColor="#1A1C3C"
+        android:pathData="M54,54m-46,0a46,46 0,1 1,92 0a46,46 0,1 1,-92 0" />
+    <path
+        android:fillColor="#2A2456"
+        android:pathData="M54,56m-36,0a36,36 0,1 1,72 0a36,36 0,1 1,-72 0" />
+    <path
+        android:fillColor="#3B2F73"
+        android:pathData="M54,58m-26,0a26,26 0,1 1,52 0a26,26 0,1 1,-52 0" />
+
+    <path
+        android:fillColor="#FFB27A"
+        android:pathData="M54,26c7,13 19,19 19,33c0,11 -8.5,19 -19,19c-10.5,0 -19,-8 -19,-19c0,-14 12,-20 19,-33z" />
+    <path
+        android:fillColor="#FFE3C7"
+        android:pathData="M54,50c3.4,6 8,9 8,15.5c0,4.8 -3.6,8 -8,8c-4.4,0 -8,-3.2 -8,-8c0,-6.5 4.6,-9.5 8,-15.5z" />
+</vector>

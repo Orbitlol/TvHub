@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Focused card: glow ring + lifted surface. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="24dp" />
+            <solid android:color="#3DA99BFF" />
+        </shape>
+    </item>
+    <item
+        android:bottom="3dp"
+        android:left="3dp"
+        android:right="3dp"
+        android:top="3dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp" />
+            <gradient
+                android:angle="270"
+                android:endColor="#232C4A"
+                android:startColor="#334068" />
+            <stroke
+                android:width="2dp"
+                android:color="#C7BDFF" />
+        </shape>
+    </item>
+</layer-list>
